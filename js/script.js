@@ -35,13 +35,6 @@ function killBack () {
 }
 
 
-function rendFly () {
-    fly.innerHTML = `<img class="flying-fly" src="./images/fly.png" alt="fly">`;
-    buzziSound.innerHTML = `<audio autoplay loop>
-                                <source src="./audio/buzzing.mp3" type="audio/mp3">
-                            </audio>`;
-}
-
 function swatterPosition (e) {
     swatter.style.left = `${e.x - swatter.clientWidth / 1.5}px`;
     swatter.style.top = `${e.y - swatter.clientHeight / 3}px`;
@@ -76,6 +69,13 @@ function overHit (e) {
 }
 
 //// create a fly ///////////////////////////////////////////////////////////////
+function rendFly () {
+    fly.innerHTML = `<img class="flying-fly" src="./images/fly.png" alt="fly">`;
+    buzziSound.innerHTML = `<audio autoplay loop>
+                                <source src="./audio/buzzing.mp3" type="audio/mp3">
+                            </audio>`;
+}
+
 function runFly () {
     randomPosition();
     positionFly();

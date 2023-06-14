@@ -77,9 +77,11 @@ function rendFly () {
 }
 
 function runFly () {
-    randomPosition();
-    positionFly();
-    runner = setTimeout(runFly, 20);
+    clearInterval(runner);
+    runner = setInterval(() => {
+        randomPosition();
+        positionFly();
+    }, 20);
 };
 
 function positionFly () {
